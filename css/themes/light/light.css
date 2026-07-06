@@ -1,0 +1,44 @@
+html {
+  color: #1a212d;
+  background-color: #fdfdff;
+  /* // test left bar */
+  background-image: url(bg0.png);
+  background-repeat: repeat-y;
+}
+body {
+  background-color: #fdfdff;
+  /* padding: 10px 20px; */
+  font-family: "Overpass", serif;
+  /* font-size: 20px; */
+  scroll-behavior: smooth;
+}
+a,
+a:visited {
+  color: navy;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+#omg-header {
+  top: 0;
+}
+#omg-nav {
+  top: 45px;
+  padding: 5px;
+  > a {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}
+#omg-footer {
+  /* top: 0; */
+}
+
+.omg-table {
+  th {
+    background-color: #fbfbfb;
+  }
+}

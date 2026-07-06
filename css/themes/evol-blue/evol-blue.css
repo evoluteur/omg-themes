@@ -1,0 +1,51 @@
+html {
+  color: white;
+  background: #0288d1 url("spirals.png");
+}
+body {
+  position: relative;
+  font-family: "Overpass", serif;
+  scroll-behavior: smooth;
+  font-size: 1.2rem;
+}
+a,
+a:visited {
+  color: #ffb74d;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffcc80;
+  text-decoration: underline;
+}
+
+#omg-header,
+#omg-nav {
+  display: block;
+  background: #0288d1 url("spirals.png");
+}
+#omg-nav {
+  top: 50px;
+}
+/*
+#omg-header {
+  position: relative;
+  top: 0;
+}
+#omg-nav {
+  position: relative;
+  top: 50px;
+  padding: 5px;
+  > a {
+    display: inline-block;
+    margin-right: 20px;
+  }
+} */
+#omg-footer {
+  /* top: 0; */
+}
+
+.omg-table {
+  th {
+    background: #0288d1 url("spirals.png");
+  }
+}
