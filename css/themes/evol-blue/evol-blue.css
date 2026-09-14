@@ -49,3 +49,14 @@ a:hover {
     background: #0288d1 url("spirals.png");
   }
 }
+
+/* title gradient, same effect as the dark theme but keeping this
+   theme's own accent color (like react-morph-charts' omg theme) */
+h1,
+h2,
+h3 {
+  background: linear-gradient(white, #e08a00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

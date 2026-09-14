@@ -1,4 +1,4 @@
-const themes = ["evol-blue", "dark", "light"];
+const themes = ["dark", "light", "evol-blue"];
 const themesColors = {
   "evol-blue": "#0288d1",
   dark: "#1a212d",

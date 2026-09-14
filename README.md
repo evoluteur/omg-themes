@@ -3,4 +3,4 @@
 Multiple themes for OMG Brand.
 
 
-(c) 2020 [Olivier Giulieri](https://evoluteur.github.io/).
+(c) 2026 [Olivier Giulieri](https://evoluteur.github.io/).

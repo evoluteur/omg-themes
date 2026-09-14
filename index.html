@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script
@@ -15,14 +15,54 @@
     </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OMG about UI/UX</title>
+    <title>OMG Themes | Dynamic Theming for Static Web Pages</title>
     <meta
       name="description"
-      content="Ideas and Experiments (mostly) on UI/UX"
+      content="OMG Themes is a lightweight, dependency-free system for dynamic theming of static web pages, with light, dark, and evol-blue themes plus adjustable density."
     />
-    <meta name="keywords" content="aaaa todo: zzzzzz" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="keywords"
+      content="OMG Themes, dynamic theming, CSS themes, dark mode, light mode, static web pages, UI/UX, Olivier Giulieri"
+    />
+    <meta name="author" content="Olivier Giulieri" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://evoluteur.github.io/omg-themes/" />
     <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="OMG Themes | Dynamic Theming for Static Web Pages"
+    />
+    <meta
+      property="og:description"
+      content="A lightweight, dependency-free system for dynamic theming of static web pages, with light, dark, and evol-blue themes plus adjustable density."
+    />
+    <meta property="og:url" content="https://evoluteur.github.io/omg-themes/" />
+    <meta
+      property="og:image"
+      content="https://evoluteur.github.io/omg-themes/favicon.png"
+    />
+    <meta property="og:site_name" content="OMG Themes" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="OMG Themes | Dynamic Theming for Static Web Pages"
+    />
+    <meta
+      name="twitter:description"
+      content="A lightweight, dependency-free system for dynamic theming of static web pages, with light, dark, and evol-blue themes plus adjustable density."
+    />
+    <meta
+      name="twitter:image"
+      content="https://evoluteur.github.io/omg-themes/favicon.png"
+    />
+
+    <meta name="theme-color" content="#1a212d" />
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Overpass"
@@ -30,19 +70,28 @@
     <link id="omg-core-css" rel="stylesheet" href="css/core.css" />
     <link id="omg-theme-css" rel="stylesheet" href="css/themes/dark/dark.css" />
     <link id="omg-density-css" rel="stylesheet" href="css/densities.css" />
-    <meta
-      name="description"
-      content="TODO: AAAAAAAAAAAAAAAAAAAAA description ZZZZZZZZZZ"
-    />
-    <meta name="keywords" content="javascript animation bouncing ball" />
 
     <script src="config/routes.js"></script>
     <script src="js/omg.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "OMG Themes",
+        "url": "https://evoluteur.github.io/omg-themes/",
+        "description": "Dynamic theming for static web pages: light, dark, and evol-blue themes with adjustable density.",
+        "author": {
+          "@type": "Person",
+          "name": "Olivier Giulieri",
+          "url": "https://evoluteur.github.io/"
+        }
+      }
+    </script>
   </head>
 
   <body onload="setupPage('home')" id="omg-body">
     <div id="omg-header">
-      <h1 onclick="setupPage('home')">OMG about UI/UX</h1>
+      <h1 onclick="setupPage('home')">OMG Themes</h1>
       <div id="omg-theme-picker"></div>
     </div>
     <h2>Dynamic theming for static web pages</h2>
@@ -51,11 +100,14 @@
       <div id="config-pickers">
         <div id="omg-density-picker"></div>
       </div>
-      <p>
-        text here text here text here text here text here text here text here
-        text here text here text here text here text here text here text here
-        text here.
-      </p>
+      <p>Support for 3 themes: light, dark, evol-blue.</p>
+
+      <img
+        class="cab"
+        src="moebius-cab.webp"
+        alt="Moebius illustration of a flying cab"
+        loading="lazy"
+      />
 
       <table class="omg-table">
         <tr>
@@ -90,12 +142,11 @@
         </tr>
       </table>
 
-      <img class="cab" src="pix/moebius/cab.webp" alt="" loading="lazy" />
       <div id="omg-content"></div>
 
       <div class="big-v-space"></div>
       <p>
-        <br />&#169; 2024
+        <br />&#169; 2026
         <a href="https://evoluteur.github.io/">Olivier Giulieri</a>
       </p>
     </div>
