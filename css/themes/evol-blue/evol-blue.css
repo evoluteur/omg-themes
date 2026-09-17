@@ -1,3 +1,13 @@
+:root {
+  --card-bg: #5594f4;
+  --card-border: #0288d1;
+  --card-foot: #dbe9ff;
+  --card-strong: white;
+  --input-bg: white;
+  --input-text: #1a1a1a;
+  --input-border: #0288d1;
+}
+
 html {
   color: white;
   background: #0288d1 url("spirals.png");
@@ -59,4 +69,41 @@ h3 {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 10px;
+  margin: 20px 5px 0;
+  cursor: pointer;
+  color: #0277bd;
+  background-color: #ffb74d;
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: #ffcc80;
+  }
+  &:active {
+    background-color: #e08a00;
+    color: white;
+  }
+}
+input,
+select {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+}
+
+@media only screen and (min-width: 700px) {
+  body,
+  button,
+  input,
+  select {
+    font-size: 18px;
+  }
 }

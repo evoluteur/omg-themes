@@ -95,12 +95,29 @@
       <div id="omg-theme-picker"></div>
     </div>
     <h2>Dynamic theming for static web pages</h2>
-    <div id="omg-nav"></div>
     <div class="content">
+      <p>Support for 3 themes: light, dark, evol-blue.</p>
+
       <div id="config-pickers">
         <div id="omg-density-picker"></div>
       </div>
-      <p>Support for 3 themes: light, dark, evol-blue.</p>
+
+      <div class="feature-cards">
+        <div class="feature-card">
+          <div class="feature-card-title">3 built-in themes</div>
+          <p>Light, dark, and evol-blue, ready to use out of the box.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-title">Adjustable density</div>
+          <p>Fine-tune spacing and sizing to fit compact or roomy layouts.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card-title">Zero dependencies</div>
+          <p>
+            Plain CSS and vanilla JS -- no build step, no framework required.
+          </p>
+        </div>
+      </div>
 
       <img
         class="cab"
@@ -111,36 +128,75 @@
 
       <table class="omg-table">
         <tr>
-          <th>Super hero name</th>
-          <th>Name</th>
-          <th>Ccccc</th>
+          <th>Alias</th>
+          <th>Real name</th>
+          <th>Affiliation</th>
         </tr>
         <tr>
           <td>Spiderman</td>
           <td>Peter Parker</td>
-          <td>ccc</td>
+          <td>Avengers</td>
         </tr>
         <tr>
           <td>Ironman</td>
-          <td>bbbb</td>
-          <td>ccc</td>
+          <td>Tony Stark</td>
+          <td>Avengers</td>
+        </tr>
+        <tr>
+          <td>Captain Marvel</td>
+          <td>Carol Danvers</td>
+          <td>Avengers</td>
         </tr>
         <tr>
           <td>Wolverine</td>
-          <td>bbbb</td>
-          <td>ccc</td>
+          <td>Logan</td>
+          <td>X-Men</td>
+        </tr>
+        <tr>
+          <td>Storm</td>
+          <td>Ororo Munroe</td>
+          <td>X-Men</td>
         </tr>
         <tr>
           <td>Diablo</td>
-          <td>bbbb</td>
-          <td>ccc</td>
+          <td>Esteban Corazon de Ablo</td>
+          <td>X-Factor</td>
         </tr>
         <tr>
           <td>Silver surfer</td>
-          <td>bbbb</td>
-          <td>ccc</td>
+          <td>Norrin Radd</td>
+          <td>Defenders</td>
         </tr>
       </table>
+
+      <h3>Form controls</h3>
+      <div class="demo-form">
+        <label
+          >Name
+          <input type="text" placeholder="Your name" />
+        </label>
+        <label
+          >Favorite theme
+          <select>
+            <option>Light</option>
+            <option selected>Dark</option>
+            <option>Evol-blue</option>
+          </select>
+        </label>
+        <label
+          >Age
+          <input class="demo-age" type="number" min="0" step="1" value="30" />
+        </label>
+        <label class="demo-checkbox"
+          ><input type="checkbox" /> Subscribe to updates
+        </label>
+      </div>
+
+      <div class="demo-buttons">
+        <button type="button" class="btn-primary">Primary</button>
+        <button type="button" class="btn-secondary">Secondary</button>
+        <button type="button" class="btn-default">Default</button>
+      </div>
 
       <div id="omg-content"></div>
 

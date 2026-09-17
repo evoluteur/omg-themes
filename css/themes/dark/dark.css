@@ -1,3 +1,13 @@
+:root {
+  --card-bg: #2d3848;
+  --card-border: #3c4a5f;
+  --card-foot: #b7c4d6;
+  --card-strong: white;
+  --input-bg: #2d3848;
+  --input-text: #e6ecf5;
+  --input-border: #3c4a5f;
+}
+
 /*
   https://evoluteur.github.io/
   (c) 2024 Olivier Giulieri
@@ -149,11 +159,13 @@ li {
 }
 input,
 select {
-  padding: 3px 6px;
-  color: white;
-  background-color: #1a1a1a;
-  border-color: silver;
-  border-radius: 2px;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 5px 10px;
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
 }
 #age,
 #height1,
