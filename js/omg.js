@@ -1,4 +1,11 @@
 const themes = ["dark", "light", "evol-blue"];
+
+// Projects that link to the hosted themes (instead of keeping synced copies)
+// set these before loading this script:
+//   window.OMG_THEMES_BASE = "https://evoluteur.github.io/omg-themes/";
+//   window.OMG_DEFAULT_THEME = "evol-blue";  // optional, defaults to "dark"
+const themeBase = () => window.OMG_THEMES_BASE || "";
+const defaultTheme = () => window.OMG_DEFAULT_THEME || "dark";
 const themesColors = {
   "evol-blue": "#0288d1",
   dark: "#1a212d",
@@ -24,14 +31,14 @@ const setupPage = (id) => {
   //   alert("home");
   // }
   let elem;
-  if (routes?.length) {
+  if (typeof routes !== "undefined" && routes?.length) {
     elem = document.getElementById("omg-nav");
     if (elem) {
       const h = routes.map((r) => `<a href="${r.url}">${r.name}</a>`).join("");
       elem.innerHTML = h;
     }
   }
-  const theme = localStorage.getItem("omg-theme") || "dark";
+  const theme = localStorage.getItem("omg-theme") || defaultTheme();
   const density = localStorage.getItem("omg-density") || "medium";
   setTheme(theme);
   renderThemePicker(theme);
@@ -41,7 +48,7 @@ const setupPage = (id) => {
 
 
 const renderThemePicker = (id) => {
-  elem = document.getElementById("omg-theme-picker");
+  const elem = document.getElementById("omg-theme-picker");
   if (elem) {
     elem.innerHTML = themes
       .map(
@@ -53,7 +60,7 @@ const renderThemePicker = (id) => {
 };
 
 const renderDensityPicker = (id) => {
-  elem = document.getElementById("omg-density-picker");
+  const elem = document.getElementById("omg-density-picker");
   if (elem) {
     elem.innerHTML =
       "Density: " +
@@ -71,8 +78,17 @@ const setTheme = (id) => {
   }
   let elem = document.getElementById("omg-theme-css");
   if (elem) {
-    elem.setAttribute("href", `css/themes/${id}/${id}.css`);
+    const href = `${themeBase()}css/themes/${id}/${id}.css`;
+    if (elem.getAttribute("href") !== href) {
+      elem.setAttribute("href", href);
+    }
     localStorage.setItem("omg-theme", id);
+    // lets page css target a theme: html[data-theme="evol-blue"] ...
+    document.documentElement.setAttribute("data-theme", id);
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta && themesColors[id]) {
+      meta.setAttribute("content", themesColors[id]);
+    }
   }
 };
 
