@@ -1,3 +1,78 @@
+/*
+  Base styles shared by all themes. Each theme only sets the colors, as
+  custom properties on :root (see css/themes/*), plus its background images.
+  https://evoluteur.github.io/omg-themes/
+ */
+html {
+  scroll-behavior: smooth;
+  color: var(--text);
+  background-color: var(--page-bg);
+}
+body {
+  font-family: "Overpass", sans-serif;
+  font-weight: var(--body-weight, normal);
+  background-color: var(--body-bg, transparent);
+}
+a,
+a:visited {
+  color: var(--link);
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* gradient titles: a theme sets --h1-gradient and --h1-fill: transparent */
+h1,
+h2,
+h3 {
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+h1 {
+  background-image: var(--h1-gradient, none);
+  -webkit-text-fill-color: var(--h1-fill, currentColor);
+}
+h2 {
+  background-image: var(--h2-gradient, none);
+  -webkit-text-fill-color: var(--h2-fill, currentColor);
+}
+h3 {
+  background-image: var(--h3-gradient, none);
+  -webkit-text-fill-color: var(--h3-fill, currentColor);
+}
+
+button {
+  padding: 8px 16px;
+  font-size: inherit;
+  border-radius: 10px;
+  margin: 20px 5px 0;
+  cursor: pointer;
+  color: var(--btn-text);
+  background-color: var(--btn-bg);
+  border: none;
+  &:hover,
+  &:focus {
+    background-color: var(--btn-hover-bg);
+  }
+  &:active {
+    color: var(--btn-active-text, var(--btn-text));
+    background-color: var(--btn-active-bg);
+  }
+}
+input,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  padding: 5px 10px;
+  color: var(--input-text);
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+}
+
 h1 {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -13,7 +88,7 @@ h1 {
 #omg-nav {
   display: block;
   position: sticky;
-  background-color: inherit;
+  background-color: var(--header-bg);
   z-index: 100;
 }
 
@@ -78,5 +153,6 @@ h1 {
   }
   th {
     font-weight: bold;
+    background-color: var(--table-head-bg);
   }
 }
