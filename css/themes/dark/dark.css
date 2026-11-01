@@ -72,6 +72,7 @@ h2 {
 }
 button {
   padding: 8px 16px;
+  font-size: inherit;
   border-radius: 10px;
   margin: 20px 5px 0;
   cursor: pointer;
@@ -160,7 +161,7 @@ li {
 input,
 select {
   font-family: inherit;
-  font-size: 16px;
+  font-size: inherit;
   padding: 5px 10px;
   color: var(--input-text);
   background-color: var(--input-bg);
@@ -230,14 +231,6 @@ td svg {
   font-size: 0.8em;
 }
 
-@media only screen and (min-width: 700px) {
-  body,
-  button,
-  input,
-  select {
-    font-size: 18px;
-  }
-}
 @media only screen and (max-width: 700px) {
   body {
     padding: 20px 5px;
