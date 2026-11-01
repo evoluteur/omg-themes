@@ -116,3 +116,9 @@ const setDensity = (id) => {
   document.documentElement.setAttribute("data-density", id);
   storageSet("omg-density", id);
 };
+
+// Apply the saved theme and density as soon as this script runs (it is
+// loaded in <head>, after the theme <link>), so the page doesn't flash the
+// default theme until onload. setupPage() then renders the pickers.
+setTheme(storageGet("omg-theme") || defaultTheme());
+setDensity(storageGet("omg-density") || "medium");
