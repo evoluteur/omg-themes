@@ -123,6 +123,7 @@
   setDensity(storageGet("omg-density") || "medium");
 
   window.OMG = {
+    version: "2.0.0",
     themes,
     densities,
     setupPage,
