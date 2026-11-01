@@ -2,45 +2,56 @@ html {
   margin: 0;
   padding: 0 0 0 20px;
 }
-body {
-  &.huge {
+/* density is set by omg.js as <html data-density="...">,
+   medium is the default when the attribute is missing */
+[data-density="huge"] {
+  body {
     padding: 10px 20px;
     font-size: 36px;
-    #omg-nav {
-      top: 70px;
-      padding: 20px;
-    }
   }
-  &.big {
+  #omg-nav {
+    top: 70px;
+    padding: 20px;
+  }
+}
+[data-density="big"] {
+  body {
     padding: 10px 20px;
     font-size: 24px;
-    #omg-nav {
-      top: 50px;
-      padding: 20px;
-    }
   }
-  &.medium {
+  #omg-nav {
+    top: 50px;
+    padding: 20px;
+  }
+}
+html:not([data-density]),
+[data-density="medium"] {
+  body {
     padding: 10px 20px;
     font-size: 18px;
-    #omg-nav {
-      top: 40px;
-      padding: 20px;
-    }
   }
-  &.small {
+  #omg-nav {
+    top: 40px;
+    padding: 20px;
+  }
+}
+[data-density="small"] {
+  body {
     padding: 10px 20px;
     font-size: 16px;
-    #omg-nav {
-      top: 32px;
-      padding: 14px;
-    }
   }
-  &.tiny {
+  #omg-nav {
+    top: 32px;
+    padding: 14px;
+  }
+}
+[data-density="tiny"] {
+  body {
     padding: 6px 10px;
     font-size: 12px;
-    #omg-nav {
-      top: 30px;
-      padding: 10px;
-    }
+  }
+  #omg-nav {
+    top: 30px;
+    padding: 10px;
   }
 }

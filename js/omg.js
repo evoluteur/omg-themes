@@ -111,9 +111,8 @@ const setDensity = (id) => {
   if (!id) {
     return;
   }
-  let elem = document.getElementById("omg-body");
-  if (elem) {
-    elem.className = id;
-    storageSet("omg-density", id);
-  }
+  // an attribute on <html> instead of the body's class, so the page's own
+  // body classes are left alone (and no #omg-body id is needed)
+  document.documentElement.setAttribute("data-density", id);
+  storageSet("omg-density", id);
 };
