@@ -7,4 +7,4 @@ const routes = [
 ];
 
 let routesMap = {};
-routes.forEach((r, idx) => (routesMap[r] = routes[idx]));
+routes.forEach((r) => (routesMap[r.id] = r));
