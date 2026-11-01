@@ -18,7 +18,7 @@ html {
 body {
   background-color: #fdfdff;
   /* padding: 10px 20px; */
-  font-family: "Overpass", serif;
+  font-family: "Overpass", sans-serif;
   /* font-size: 20px; */
   scroll-behavior: smooth;
 }

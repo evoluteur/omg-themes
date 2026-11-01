@@ -20,7 +20,7 @@ html {
   background-repeat: repeat-y;
 }
 body {
-  font-family: "Overpass", serif;
+  font-family: "Overpass", sans-serif;
   /* font-family: monospace; */
   font-weight: 300;
   color: white;
