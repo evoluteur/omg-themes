@@ -6,6 +6,21 @@ const themes = ["dark", "light", "evol-blue"];
 //   window.OMG_DEFAULT_THEME = "evol-blue";  // optional, defaults to "dark"
 const themeBase = () => window.OMG_THEMES_BASE || "";
 const defaultTheme = () => window.OMG_DEFAULT_THEME || "dark";
+
+// localStorage can throw (private browsing, blocked site data):
+// fail quietly so the page still gets a theme.
+const storageGet = (key) => {
+  try {
+    return localStorage.getItem(key);
+  } catch (e) {
+    return null;
+  }
+};
+const storageSet = (key, value) => {
+  try {
+    localStorage.setItem(key, value);
+  } catch (e) {}
+};
 const themesColors = {
   "evol-blue": "#0288d1",
   dark: "#1a212d",
@@ -38,8 +53,8 @@ const setupPage = (id) => {
       elem.innerHTML = h;
     }
   }
-  const theme = localStorage.getItem("omg-theme") || defaultTheme();
-  const density = localStorage.getItem("omg-density") || "medium";
+  const theme = storageGet("omg-theme") || defaultTheme();
+  const density = storageGet("omg-density") || "medium";
   setTheme(theme);
   renderThemePicker(theme);
   setDensity(density);
@@ -82,7 +97,7 @@ const setTheme = (id) => {
     if (elem.getAttribute("href") !== href) {
       elem.setAttribute("href", href);
     }
-    localStorage.setItem("omg-theme", id);
+    storageSet("omg-theme", id);
     // lets page css target a theme: html[data-theme="evol-blue"] ...
     document.documentElement.setAttribute("data-theme", id);
     const meta = document.querySelector('meta[name="theme-color"]');
@@ -99,6 +114,6 @@ const setDensity = (id) => {
   let elem = document.getElementById("omg-body");
   if (elem) {
     elem.className = id;
-    localStorage.setItem("omg-density", id);
+    storageSet("omg-density", id);
   }
 };
