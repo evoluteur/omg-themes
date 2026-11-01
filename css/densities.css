@@ -4,16 +4,6 @@ html {
 }
 /* density is set by omg.js as <html data-density="...">,
    medium is the default when the attribute is missing */
-[data-density="huge"] {
-  body {
-    padding: 10px 20px;
-    font-size: 36px;
-  }
-  #omg-nav {
-    top: 70px;
-    padding: 20px;
-  }
-}
 [data-density="big"] {
   body {
     padding: 10px 20px;

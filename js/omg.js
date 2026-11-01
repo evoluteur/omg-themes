@@ -37,14 +37,9 @@ const themeIcons = {
   "evol-blue":
     '<svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true"><path d="M10 10 10.18 10.07 10.28 10.25 10.26 10.5 10.09 10.74 9.78 10.91 9.37 10.93 8.93 10.75 8.55 10.37 8.32 9.81 8.33 9.15 8.61 8.47 9.17 7.91 9.96 7.56 10.89 7.53 11.83 7.86 12.63 8.55 13.16 9.55 13.29 10.74 12.98 11.96 12.2 13.03 11.04 13.8 9.61 14.11 8.1 13.87 6.72 13.08 5.67 11.79 5.13 10.15 5.21 8.36 5.95 6.65 7.31 5.28 9.12 4.44 11.18 4.31 13.21 4.93 14.95 6.28 16.12 8.22 16.54 10.51 16.11 12.87 14.83 14.98 12.83 16.54 10.34 17.3 7.68 17.13" /></svg>',
 };
-// const densities = ["huge", "big", "medium", "small", "tiny"];
 const densities = ["big", "medium", "small", "tiny"];
 
 const setupPage = (id) => {
-  // if (id === "home") {
-  //   //
-  //   alert("home");
-  // }
   let elem;
   if (typeof routes !== "undefined" && routes?.length) {
     elem = document.getElementById("omg-nav");
@@ -60,7 +55,6 @@ const setupPage = (id) => {
   setDensity(density);
   renderDensityPicker(density);
 };
-
 
 const renderThemePicker = (id) => {
   const elem = document.getElementById("omg-theme-picker");

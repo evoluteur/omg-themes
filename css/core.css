@@ -1,7 +1,4 @@
 .config-pickers {
-  /* position: absolute;
-  right: 20px;
-  top: 20px; */
   > div {
     padding: 6px 0;
   }
@@ -21,17 +18,14 @@ h1 {
 #omg-nav {
   display: block;
   position: sticky;
-  /* background: #0288d1 url("spirals.png"); */
   background-color: inherit;
   z-index: 100;
 }
 
 #omg-header {
-  /* position: relative; */
   top: 0;
 }
 #omg-nav {
-  /* position: relative; */
   top: 50px;
   padding: 5px;
   > a {
@@ -42,7 +36,6 @@ h1 {
 
 #config-pickers {
   background-color: inherit;
-  /* position: fixed; */
   top: 5px;
   background-color: inherit;
   > div {
@@ -51,12 +44,8 @@ h1 {
 }
 #omg-theme-picker {
   position: absolute;
-  /* position: sticky;
-  top: 45px;
-  right: 100px; */
   top: 5px;
   right: 5px;
-  /* background: inherit; */
   z-index: 200;
   display: inline-flex;
   align-items: center;
@@ -81,16 +70,10 @@ h1 {
 }
 
 #omg-density-picker {
-  /* position: sticky;
-  top: 5px;
-  right: 100px; */
   background-color: inherit;
   z-index: 200;
   > a {
     margin-right: 20px;
-    /* &.selected {
-      text-decoration: underline;
-    } */
   }
 }
 
