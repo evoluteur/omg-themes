@@ -1,0 +1,28 @@
+{
+  "name": "omg-themes",
+  "version": "2.0.1",
+  "description": "Light, dark and evol-blue themes and four text densities for evoluteur's projects: CSS custom properties, shared rules and a small script with a theme picker that remembers your choice. Copy the files into a project or link to the hosted ones. No dependencies.",
+  "repository": "github:evoluteur/omg-themes",
+  "homepage": "https://evoluteur.github.io/omg-themes/",
+  "copyright": "(c) 2026 Olivier Giulieri",
+  "author": "Olivier Giulieri (https://evoluteur.github.io/)",
+  "license": "MIT",
+  "main": "js/omg.js",
+  "files": [
+    "js/omg.js",
+    "css/core.css",
+    "css/densities.css",
+    "css/themes"
+  ],
+  "keywords": [
+    "themes",
+    "theme-switcher",
+    "dark-theme",
+    "light-theme",
+    "dark-mode",
+    "css-variables",
+    "css-custom-properties",
+    "css",
+    "javascript"
+  ]
+}
