@@ -56,7 +56,6 @@
     const theme = storageGet("omg-theme") || defaultTheme();
     const density = storageGet("omg-density") || "medium";
     setTheme(theme);
-    renderThemePicker(theme);
     setDensity(density);
     renderDensityPicker(density);
   };
@@ -104,6 +103,8 @@
         meta.setAttribute("content", themesColors[id]);
       }
     }
+    // move the "selected" highlight to the new theme
+    renderThemePicker(id);
   };
 
   const setDensity = (id) => {
@@ -123,7 +124,7 @@
   setDensity(storageGet("omg-density") || "medium");
 
   window.OMG = {
-    version: "2.0.0",
+    version: "2.0.1",
     themes,
     densities,
     setupPage,

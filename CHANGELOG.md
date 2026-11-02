@@ -3,6 +3,11 @@
 Versions are git tags (`v2.0.0`...). Projects that link to the hosted files can
 pin one, see "Pinning a version" in the README.
 
+## 2.0.1 (2026-11-01)
+
+- The theme picker highlights the theme you pick (it used to stay on the
+  theme the page loaded with).
+
 ## 2.0.0 (2026-11-01)
 
 Breaking:
